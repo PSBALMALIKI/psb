@@ -43,7 +43,7 @@ window.addEventListener('load', function() {
 
 window.addEventListener('load', function() {
     if (localStorage.getItem('IDS') === null || localStorage.getItem('IDS') === '') {
-      window.location.href = '../login.html';
+      //window.location.href = '../login.html';
       } else {
       
       selectUserProfil();
