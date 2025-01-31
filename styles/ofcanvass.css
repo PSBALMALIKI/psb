@@ -1,0 +1,111 @@
+/* Warna Latar dan Teks sesuai Tema */
+.offcanvas {
+  background-color: var(--app-bg, #121212); /* Latar belakang tema gelap */
+  color: var(--app-content-main-color, #f0f0f0); /* Teks terang */
+}
+
+.offcanvas-header {
+  border-bottom: 1px solid var(--table-border, #333); /* Garis pemisah */
+  background-color: var(--sidebar, #1c1c1c); /* Latar sidebar */
+  color: var(--sidebar-main-color, #f0f0f0); /* Teks sidebar */
+}
+
+.offcanvas-footer {
+  border-top: 1px solid var(--table-border, #333); /* Garis pemisah */
+  padding: 1rem;
+  background-color: var(--sidebar, #1c1c1c); /* Latar sidebar */
+  color: var(--sidebar-main-color, #f0f0f0); /* Teks footer */
+}
+
+.btn-close {
+  color: var(--app-content-main-color, #f0f0f0); /* Teks tombol tutup */
+}
+
+/* Floating Label Input */
+.custom-input {
+  background-color: var(--app-content-secondary-color); /* Update to match collapse.css */
+  color: var(--app-content-main-color); /* Update to match collapse.css */
+  border: 1px solid var(--table-border); /* Update to match collapse.css */
+  border-radius: 4px; /* Update to match collapse.css */
+}
+
+.custom-input:focus {
+  border-color: var(--action-color); /* Update to match collapse.css */
+  box-shadow: 0 0 0 0.2rem rgba(40, 105, 255, 0.25); /* Update to match collapse.css */
+  outline: none;
+}
+
+textarea.custom-input {
+  resize: none; /* Hilangkan resize */
+}
+
+/* Atur posisi label saat input kosong */
+.form-floating > label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  padding: 1rem 0.75rem; /* Sesuaikan padding jika diperlukan */
+  pointer-events: none;
+  border: 1px solid transparent;
+  transform-origin: 0 0;
+  transition: opacity 0.1s ease-in-out, transform 0.1s ease-in-out;
+}
+
+/* Atur posisi label saat input fokus atau terisi */
+.form-floating > .form-control:not(:placeholder-shown) ~ label,
+.form-floating > .form-control:focus ~ label {
+  transform: translateY(-1em) scale(0.85); /* Ubah nilai translateY untuk lebih tinggi */
+  opacity: 0.65;
+}
+
+
+
+
+
+
+
+
+
+.list-group {
+  background-color: var(--app-content-secondary-color);
+  border: 1px solid var(--table-border);
+  border-radius: 8px;
+  overflow: hidden;
+
+
+  max-height: calc(4 * 2.5rem); /* Tinggi maksimal untuk 3 checkbox */
+  overflow-y: auto; /* Tambahkan scrollbar jika tinggi melebihi max-height */
+  padding: 0;
+
+  width: 50%;
+}
+
+.list-group-item {
+  background-color: var(--sidebar);
+  color: var(--sidebar-main-color);
+  padding: 10px 15px;
+  border-bottom: 1px solid var(--table-border);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.list-group-item:last-child {
+  border-bottom: none;
+}
+
+.list-group-item:hover {
+  background-color: var(--sidebar-hover-link);
+  color: var(--sidebar-link);
+}
+
+.list-group-item input[type="checkbox"] {
+  accent-color: var(--action-color);
+}
+
+.list-group-item input[type="checkbox"]:hover {
+  accent-color: var(--action-color-hover);
+}
+
+.list-group-item .form-check-label {
+  cursor: pointer;
+}
